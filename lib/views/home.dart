@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_social/utils/colors.dart';
 import 'package:flutter_social/views/tabs/chats.dart';
 import 'package:flutter_social/views/tabs/feeds.dart';
 import 'package:flutter_social/views/tabs/notifications.dart';
@@ -14,8 +13,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _currentIndex = 0;
   final List<Widget> _pages = [
-    FeedsPage(),
     ChatsPage(),
+    FeedsPage(),
     NotificationsPage(),
     ProfilePage()
   ];
@@ -32,9 +31,10 @@ class _HomePageState extends State<HomePage> {
     final bottomNavBar = BottomNavigationBar(
       onTap: onTabTapped,
       currentIndex: _currentIndex,
-      selectedItemColor: primaryColor,
-      unselectedItemColor: Colors.grey.withOpacity(0.6),
-      elevation: 0.0,
+      type: BottomNavigationBarType.fixed,
+      // selectedItemColor: primaryColor,
+      // unselectedItemColor: Colors.grey.withOpacity(0.6),
+      // elevation: 0.0,
       items: [
         BottomNavigationBarItem(
           icon: Icon(Icons.rss_feed),
@@ -69,6 +69,10 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       bottomNavigationBar: bottomNavBar,
+      // body: IndexedStack(
+      //   index: _currentIndex,
+      //   children: _pages,
+      // ),
       body: _pages[_currentIndex],
     );
   }

@@ -48,6 +48,30 @@ class FeedsPage extends StatelessWidget {
                     FeedCard3(
                       feed: feeds[2],
                     ),
+                    SizedBox(
+                      height: 10.0,
+                    ),
+                    FeedCard2(
+                      feed: feeds[1],
+                    ),
+                    SizedBox(
+                      height: 10.0,
+                    ),
+                    FeedCard3(
+                      feed: feeds[2],
+                    ),
+                    SizedBox(
+                      height: 10.0,
+                    ),
+                    FeedCard2(
+                      feed: feeds[1],
+                    ),
+                    SizedBox(
+                      height: 10.0,
+                    ),
+                    FeedCard3(
+                      feed: feeds[2],
+                    ),
                   ],
                 ),
               )
